@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 124" role="img" aria-label="Montura Solaina, dibujada para el catálogo de la óptica">
+<title>Montura Solaina</title>
+<g fill="none" stroke="#12202C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <g>
+    <path d="M52 32h80c5 0 8 4 7 9l-7 36c-2 10-12 17-25 17h-30c-13 0-23-7-25-17l-7-36c-1-5 2-9 7-9z" fill="#94A5B2" fill-opacity="0.95"/>
+    <path d="M50 44l-18-4" />
+    <path d="M32 40c-6-1-12 0-16 3"/>
+  </g>
+  <g transform="translate(300,0) scale(-1,1)">
+    <path d="M52 32h80c5 0 8 4 7 9l-7 36c-2 10-12 17-25 17h-30c-13 0-23-7-25-17l-7-36c-1-5 2-9 7-9z" fill="#94A5B2" fill-opacity="0.95"/>
+    <path d="M50 44l-18-4" />
+    <path d="M32 40c-6-1-12 0-16 3"/>
+  </g>
+  <path d="M130 38c10-6 22-6 32 0"/>
+</g>
+<g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.65">
+  <path d="M78 74l16-22"/>
+  <path d="M194 74l16-22"/>
+</g>
+</svg>

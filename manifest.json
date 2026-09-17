@@ -1,0 +1,13 @@
+{
+  "name": "Óptica Sextante (demostración)",
+  "short_name": "Sextante",
+  "description": "Plantilla de demostración para óptica. Negocio ficticio.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F7F9FB",
+  "theme_color": "#F7F9FB",
+  "lang": "es",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

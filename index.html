@@ -1,0 +1,501 @@
+<!doctype html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. «Óptica Sextante» es un negocio FICTICIO, inventado
+  para esta plantilla. Nombre, dirección, teléfono, horarios, precios, equipo
+  y modelos de montura son datos de muestra y no corresponden a ningún negocio
+  real. No indexar, no citar como fuente.
+  Esta web no da ningún diagnóstico ni promete ningún resultado de salud.
+  Concepto: «Optotipo».
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Óptica Sextante · gafas y revisión visual (demostración)</title>
+<meta name="description" content="Plantilla de demostración para óptica. Óptica Sextante es un negocio ficticio: catálogo de monturas, revisión visual con cita y precios claros.">
+<meta name="theme-color" content="#F7F9FB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Óptica Sextante · plantilla de óptica (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Plantilla con concepto «Optotipo»: la carta de letras como sistema visual.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Optician",
+  "name": "Óptica Sextante",
+  "description": "Óptica con taller propio y revisión visual con cita. Negocio ficticio usado como demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa Nova do Faro, 14",
+    "postalCode": "36002",
+    "addressLocality": "Pontevedra",
+    "addressRegion": "Pontevedra",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34986000021",
+  "email": "hola@opticasextante.example",
+  "priceRange": "€€",
+  "openingHours": ["Mo-Fr 10:00-13:30", "Mo-Fr 16:30-20:30", "Sa 10:30-13:30"],
+  "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
+}
+</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" aria-hidden="true" data-cursor>
+  <span class="cursor__lente"></span>
+  <span class="cursor__texto"></span>
+</div>
+
+<header class="cabecera" data-cabecera>
+  <a class="marca" href="#inicio">
+    <svg class="marca__ojo" viewBox="0 0 44 24" aria-hidden="true" focusable="false">
+      <path d="M2 12C8 4 15 0 22 0s14 4 20 12c-6 8-13 12-20 12S8 20 2 12z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="22" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="22" cy="12" r="2" fill="currentColor"/>
+    </svg>
+    <span class="marca__texto">Óptica Sextante</span>
+  </a>
+
+  <button class="hamburguesa" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>
+    <span class="hamburguesa__lineas" aria-hidden="true"><i></i><i></i></span>
+    <span>Menú</span>
+  </button>
+
+  <nav class="nav" id="menu-principal" aria-label="Navegación principal" data-menu>
+    <ul>
+      <li><a href="#monturas">Monturas</a></li>
+      <li><a href="#graduacion">Tu graduación</a></li>
+      <li><a href="#revision">La revisión</a></li>
+      <li><a href="#lentes">Lentes</a></li>
+      <li><a href="#taller">Taller</a></li>
+      <li><a href="#cita">Cita</a></li>
+    </ul>
+    <a class="boton boton--azul nav__cta" href="#cita">Pedir revisión</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+  <!-- ══════════ HERO: la carta de optotipos ══════════ -->
+  <section class="hero" id="inicio">
+    <div class="carta" data-carta>
+      <ol class="carta__filas">
+        <li class="fila fila--1" data-fila><span class="fila__agudeza">0,1</span><p>E</p></li>
+        <li class="fila fila--2" data-fila><span class="fila__agudeza">0,2</span><p>VER BIEN</p></li>
+        <li class="fila fila--3" data-fila><span class="fila__agudeza">0,4</span><p>NO ES UN LUJO</p></li>
+        <li class="fila fila--4" data-fila><span class="fila__agudeza">0,6</span><p>ES LA PRIMERA HERRAMIENTA</p></li>
+        <li class="fila fila--5" data-fila><span class="fila__agudeza">0,8</span><p>QUE USAS CADA DÍA SIN DARTE CUENTA</p></li>
+        <li class="fila fila--6" data-fila><span class="fila__agudeza">1,0</span><p>ÓPTICA SEXTANTE · RÚA NOVA DO FARO, 14 · PONTEVEDRA · DESDE 1998</p></li>
+      </ol>
+      <span class="carta__marca" data-marca-fila aria-hidden="true"></span>
+    </div>
+
+    <div class="hero__pie">
+      <p class="hero__entrada">
+        Óptica de barrio con taller propio. Te medimos la vista con calma, te enseñamos
+        lo que hay y te decimos el precio antes de montar nada.
+      </p>
+      <div class="hero__acciones">
+        <a class="boton boton--azul" href="#cita" data-iman>Pedir revisión</a>
+        <a class="boton boton--linea" href="#monturas" data-iman>Ver monturas</a>
+      </div>
+      <p class="hero__aviso">
+        La revisión visual de una óptica no es una consulta médica. Si vemos algo que no
+        nos corresponde, te lo decimos y te mandamos al oftalmólogo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ DATOS ══════════ -->
+  <section class="datos" aria-label="La óptica en cifras">
+    <ul>
+      <li><b data-contador="28" data-sufijo="">0</b><span>años en la misma esquina</span></li>
+      <li><b data-contador="30" data-sufijo=" min">0</b><span>dura una revisión completa</span></li>
+      <li><b data-contador="240" data-sufijo="">0</b><span>monturas en el escaparate</span></li>
+      <li><b data-contador="48" data-sufijo=" h">0</b><span>para tener las gafas montadas</span></li>
+    </ul>
+  </section>
+
+  <!-- ══════════ MONTURAS ══════════ -->
+  <section class="monturas" id="monturas" aria-labelledby="t-monturas">
+    <div class="seccion__cabeza">
+      <p class="indice">01 — Monturas</p>
+      <h2 id="t-monturas" data-optotipo>Ocho que nos gustan</h2>
+      <p class="parrafo">
+        Del escaparate entero, estas son las que más recomendamos. Todas se pueden
+        graduar, y el precio de la montura no incluye las lentes: eso se calcula aparte
+        según tu graduación.
+      </p>
+    </div>
+
+    <div class="filtros" role="group" aria-label="Filtrar monturas por material">
+      <button type="button" class="chip esta-activo" data-filtro="todas" aria-pressed="true">Todas</button>
+      <button type="button" class="chip" data-filtro="acetato" aria-pressed="false">Acetato</button>
+      <button type="button" class="chip" data-filtro="metal" aria-pressed="false">Metal</button>
+      <button type="button" class="chip" data-filtro="sol" aria-pressed="false">Sol</button>
+      <p class="filtros__cuenta" role="status" data-cuenta>8 monturas</p>
+    </div>
+
+    <ul class="rejilla" data-rejilla>
+      <li class="montura" data-material="acetato">
+        <img src="assets/monturas/montura-roda.svg" width="300" height="124" loading="lazy" alt="Montura Roda: acetato redondo en negro.">
+        <div class="montura__pie">
+          <h3>Roda</h3>
+          <p class="montura__dato">Acetato · redonda · unisex</p>
+          <p class="montura__precio">135 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="metal">
+        <img src="assets/monturas/montura-croa.svg" width="300" height="124" loading="lazy" alt="Montura Croa: metal redondo fino en dorado viejo.">
+        <div class="montura__pie">
+          <h3>Croa</h3>
+          <p class="montura__dato">Metal · redonda · varilla fina</p>
+          <p class="montura__precio">155 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="acetato">
+        <img src="assets/monturas/montura-lombo.svg" width="300" height="124" loading="lazy" alt="Montura Lombo: acetato pantos en marrón.">
+        <div class="montura__pie">
+          <h3>Lombo</h3>
+          <p class="montura__dato">Acetato · pantos · cara ancha</p>
+          <p class="montura__precio">145 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="acetato">
+        <img src="assets/monturas/montura-illa.svg" width="300" height="124" loading="lazy" alt="Montura Illa: acetato cuadrado en azul eléctrico.">
+        <div class="montura__pie">
+          <h3>Illa</h3>
+          <p class="montura__dato">Acetato · cuadrada · color</p>
+          <p class="montura__precio">129 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="acetato">
+        <img src="assets/monturas/montura-gaivota.svg" width="300" height="124" loading="lazy" alt="Montura Gaivota: acetato de ojo de gato en negro.">
+        <div class="montura__pie">
+          <h3>Gaivota</h3>
+          <p class="montura__dato">Acetato · ojo de gato</p>
+          <p class="montura__precio">165 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="metal">
+        <img src="assets/monturas/montura-faro.svg" width="300" height="124" loading="lazy" alt="Montura Faro: metal tipo aviador en gris.">
+        <div class="montura__pie">
+          <h3>Faro</h3>
+          <p class="montura__dato">Metal · aviador · ligera</p>
+          <p class="montura__precio">175 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="metal">
+        <img src="assets/monturas/montura-ponte.svg" width="300" height="124" loading="lazy" alt="Montura Ponte: titanio rectangular en gris pizarra.">
+        <div class="montura__pie">
+          <h3>Ponte</h3>
+          <p class="montura__dato">Titanio · rectangular · 18 g</p>
+          <p class="montura__precio">210 €</p>
+        </div>
+      </li>
+      <li class="montura" data-material="sol">
+        <img src="assets/monturas/montura-solaina.svg" width="300" height="124" loading="lazy" alt="Montura Solaina: gafa de sol de acetato con lente gris.">
+        <div class="montura__pie">
+          <h3>Solaina</h3>
+          <p class="montura__dato">Sol · acetato · graduable</p>
+          <p class="montura__precio">139 €</p>
+        </div>
+      </li>
+    </ul>
+    <p class="monturas__nota">Modelos y precios inventados para esta demostración. Los dibujos son propios: no hay fotos de producto de ninguna marca real.</p>
+  </section>
+
+  <!-- ══════════ GRADUACIÓN ══════════ -->
+  <section class="graduacion" id="graduacion" aria-labelledby="t-graduacion">
+    <div class="seccion__cabeza">
+      <p class="indice">02 — Tu graduación</p>
+      <h2 id="t-graduacion" data-optotipo>Qué significan esos números</h2>
+      <p class="parrafo">
+        En la receta pone algo como <b>−2,25 (−0,50) 180°</b> y nadie te lo explica. Mueve
+        la barra y verás, más o menos, cómo se ve un texto sin corregir según la miopía.
+      </p>
+    </div>
+
+    <div class="simulador">
+      <div class="simulador__muestra">
+        <p class="simulador__texto" data-borroso>
+          El plan de la tarde: bajar a comprar el pan, mirar el cartel del cine de la
+          esquina y leer el número del portal sin acercarte.
+        </p>
+      </div>
+
+      <div class="simulador__mando">
+        <label for="dioptrias">Miopía simulada</label>
+        <input id="dioptrias" type="range" min="0" max="60" step="5" value="0" data-rango
+               aria-describedby="dioptrias-valor">
+        <p class="simulador__valor" id="dioptrias-valor" data-valor>0,00 dioptrías · así lo ves con tu corrección puesta</p>
+        <p class="simulador__aviso">
+          Es una ilustración, no una prueba: el desenfoque real depende de muchas cosas y
+          no se mide en una pantalla. Nadie puede graduarse la vista con una web.
+        </p>
+      </div>
+    </div>
+
+    <dl class="glosario">
+      <div><dt>Esfera</dt><dd>El primer número. Negativo, miopía; positivo, hipermetropía.</dd></div>
+      <div><dt>Cilindro</dt><dd>El del paréntesis. Es el astigmatismo: la vista no enfoca igual en todos los ejes.</dd></div>
+      <div><dt>Eje</dt><dd>Los grados. Dice en qué orientación va ese cilindro, de 0 a 180.</dd></div>
+      <div><dt>Adición</dt><dd>Aparece a partir de los 45 y pico. Es lo que se suma para ver de cerca.</dd></div>
+    </dl>
+  </section>
+
+  <!-- ══════════ REVISIÓN ══════════ -->
+  <section class="revision" id="revision" aria-labelledby="t-revision">
+    <div class="seccion__cabeza">
+      <p class="indice">03 — La revisión</p>
+      <h2 id="t-revision" data-optotipo>Media hora, sin prisa</h2>
+    </div>
+
+    <div class="revision__rejilla">
+      <ol class="momentos">
+        <li>
+          <p class="momentos__hora">00:00</p>
+          <h3>Qué te pasa</h3>
+          <p>Antes de encender nada, preguntamos: a qué distancia trabajas, cuántas horas
+          de pantalla, si conduces de noche, qué gafas traes puestas y desde cuándo.</p>
+        </li>
+        <li>
+          <p class="momentos__hora">00:05</p>
+          <h3>Lo que ya tienes</h3>
+          <p>Medimos tus gafas actuales en el frontofocómetro. Muchas veces el problema no
+          es la vista: es una montura torcida o una lente rayada.</p>
+        </li>
+        <li>
+          <p class="momentos__hora">00:10</p>
+          <h3>La carta</h3>
+          <p>Agudeza de lejos y de cerca, con y sin corrección, y prueba de lentes hasta
+          que la letra pequeña deja de bailar.</p>
+        </li>
+        <li>
+          <p class="momentos__hora">00:22</p>
+          <h3>Cómo trabajan juntos</h3>
+          <p>Los dos ojos por separado y luego a la vez: enfoque, convergencia y si uno
+          está haciendo el trabajo del otro.</p>
+        </li>
+        <li>
+          <p class="momentos__hora">00:30</p>
+          <h3>Lo que te llevas</h3>
+          <p>La graduación por escrito, aunque no compres aquí, y un presupuesto cerrado
+          si decides montar. Sin compromiso y sin llamadas después.</p>
+        </li>
+      </ol>
+
+      <figure class="revision__foto">
+        <img src="assets/foto/w800/lentes-prueba.jpg"
+             srcset="assets/foto/w800/lentes-prueba.jpg 800w, assets/foto/w1600/lentes-prueba.jpg 1600w"
+             sizes="(max-width: 900px) 92vw, 30vw"
+             width="1600" height="2843" loading="lazy"
+             alt="Caja de lentes de prueba y gafa de ensayo, el material con el que se ajusta la graduación.">
+        <figcaption>La caja de pruebas: lente a lente hasta que la letra deja de bailar.</figcaption>
+      </figure>
+
+      <aside class="limite">
+        <h3>Lo que no hacemos</h3>
+        <p>Una óptica no es una consulta médica y aquí no se diagnostica nada. No
+        recetamos medicamentos, no tratamos enfermedades del ojo y no vamos a decirte que
+        algo «se cura» con unas gafas.</p>
+        <p>Si en la revisión aparece algo que no nos corresponde —una molestia que no
+        encaja, un cambio brusco de graduación, cualquier cosa rara—, te lo decimos con
+        claridad y te derivamos al oftalmólogo. Es lo que haríamos con nuestra familia.</p>
+        <p class="limite__precio"><b>25 €</b> la revisión suelta · <b>gratuita</b> si montas las gafas aquí</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ══════════ LENTES ══════════ -->
+  <section class="lentes" id="lentes" aria-labelledby="t-lentes">
+    <div class="seccion__cabeza">
+      <p class="indice">04 — Lentes</p>
+      <h2 id="t-lentes" data-optotipo>El precio, antes de montar</h2>
+      <p class="parrafo">Precios por par, con antirreflejante y endurecido incluidos. La graduación alta sube el precio porque sube el índice de la lente; te lo decimos en el momento, no al recoger.</p>
+    </div>
+
+    <table class="tabla">
+      <caption class="visualmente-oculta">Precios de lentes, por par, IVA incluido</caption>
+      <thead>
+        <tr><th scope="col">Lente</th><th scope="col">Desde</th><th scope="col">Para quién</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Monofocal</th><td>60 €</td><td>Una sola distancia. La de toda la vida.</td></tr>
+        <tr><th scope="row">Monofocal de índice alto</th><td>110 €</td><td>Graduaciones fuertes, para que el cristal no abulte.</td></tr>
+        <tr><th scope="row">Progresiva</th><td>190 €</td><td>Lejos, intermedio y cerca en la misma lente.</td></tr>
+        <tr><th scope="row">Ocupacional de oficina</th><td>150 €</td><td>Pantalla y papel; no vale para conducir.</td></tr>
+        <tr><th scope="row">Fotocromática</th><td>+70 €</td><td>Se oscurece al sol. No sustituye a una gafa de sol dentro del coche.</td></tr>
+        <tr><th scope="row">Filtro para pantallas</th><td>+30 €</td><td>Quita algo de reflejo. No prometemos milagros con el cansancio.</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="servicios">
+      <li><span>Ajuste y limpieza</span><b>Gratis, siempre</b></li>
+      <li><span>Montaje en tu propia montura</span><b>25 €</b></li>
+      <li><span>Cambio de plaquetas o varilla</span><b>desde 15 €</b></li>
+      <li><span>Adaptación de lentes de contacto</span><b>40 €</b></li>
+    </ul>
+  </section>
+
+  <!-- ══════════ TALLER ══════════ -->
+  <section class="taller" id="taller" aria-labelledby="t-taller">
+    <div class="seccion__cabeza">
+      <p class="indice">05 — Taller</p>
+      <h2 id="t-taller" data-optotipo>Se montan aquí, en la trastienda</h2>
+      <p class="parrafo">
+        Tenemos biseladora propia, así que la mayoría de las gafas salen en 48 horas y
+        los arreglos pequeños, en el momento. Somos tres.
+      </p>
+    </div>
+
+    <ul class="equipo">
+      <li>
+        <img src="assets/monturas/montura-croa.svg" width="300" height="124" loading="lazy" alt="Montura Croa, la que suele llevar Marta.">
+        <h3>Marta Xesteira</h3>
+        <p class="equipo__papel">Óptica-optometrista · contactología</p>
+        <p>Lleva la óptica desde 2006. Es quien hace la mayoría de las revisiones y la que
+        más pelea con las adaptaciones difíciles de lentillas.</p>
+      </li>
+      <li>
+        <img src="assets/monturas/montura-ponte.svg" width="300" height="124" loading="lazy" alt="Montura Ponte, la que suele llevar Álvaro.">
+        <h3>Álvaro Sendón</h3>
+        <p class="equipo__papel">Óptico-optometrista · progresivas</p>
+        <p>Se ocupa de las progresivas y de las graduaciones que cambian mucho. Tiene
+        paciencia infinita para volver a medir por tercera vez.</p>
+      </li>
+      <li>
+        <img src="assets/monturas/montura-illa.svg" width="300" height="124" loading="lazy" alt="Montura Illa, la que suele llevar Iria.">
+        <h3>Iria Coteliño</h3>
+        <p class="equipo__papel">Taller y montaje</p>
+        <p>Bisela, monta y endereza. Si alguna vez te has sentado encima de las gafas,
+        es la persona que las devuelve a su sitio.</p>
+      </li>
+    </ul>
+    <figure class="taller__foto">
+      <img src="assets/foto/w800/escaparate.jpg"
+           srcset="assets/foto/w800/escaparate.jpg 800w, assets/foto/w1600/escaparate.jpg 1600w"
+           sizes="(max-width: 900px) 92vw, 88vw"
+           width="1600" height="1067" loading="lazy"
+           alt="Pared de monturas colocadas en sus expositores dentro de una óptica.">
+      <figcaption>Fotografía de archivo: el escaparate no es el de este negocio, que es inventado.</figcaption>
+    </figure>
+
+    <p class="taller__nota">Personas inventadas para esta demostración. Las monturas que acompañan a cada ficha son dibujos propios del catálogo, no retratos.</p>
+  </section>
+
+  <!-- ══════════ CITA ══════════ -->
+  <section class="cita" id="cita" aria-labelledby="t-cita">
+    <div class="seccion__cabeza">
+      <p class="indice">06 — Cita</p>
+      <h2 id="t-cita" data-optotipo>Rúa Nova do Faro, 14</h2>
+    </div>
+
+    <div class="cita__rejilla">
+      <form class="formulario" data-cita novalidate>
+        <h3>Pedir una revisión</h3>
+        <p class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </p>
+        <p class="campo">
+          <label for="tel">Teléfono</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" required>
+        </p>
+        <p class="campo">
+          <label for="franja">Cuándo te viene bien</label>
+          <select id="franja" name="franja">
+            <option>Mañanas, de 10:00 a 13:30</option>
+            <option>Tardes, de 16:30 a 20:30</option>
+            <option>Sábado por la mañana</option>
+          </select>
+        </p>
+        <p class="campo">
+          <label for="motivo">Qué te trae</label>
+          <textarea id="motivo" name="motivo" rows="3" required>Llevo dos años con las mismas gafas y me cuesta leer de cerca</textarea>
+        </p>
+        <button class="boton boton--azul" type="submit" data-iman>Pedir la cita</button>
+        <p class="formulario__estado" data-cita-estado role="status"></p>
+        <p class="formulario__demo">Formulario de muestra: no envía nada a ningún sitio ni guarda lo que escribas.</p>
+      </form>
+
+      <div class="donde">
+        <p class="donde__estado" data-estado>Comprobando el horario…</p>
+        <address>
+          Rúa Nova do Faro, 14 · bajo<br>
+          36002 Pontevedra<br>
+          <a href="tel:+34986000021">986 00 00 21</a><br>
+          <a href="mailto:hola@opticasextante.example">hola@opticasextante.example</a>
+        </address>
+        <dl class="horario" data-horario>
+          <div data-dias="1,2,3,4,5"><dt>Lunes a viernes</dt><dd>10:00–13:30 · 16:30–20:30</dd></div>
+          <div data-dias="6"><dt>Sábado</dt><dd>10:30–13:30</dd></div>
+          <div data-dias="0"><dt>Domingo</dt><dd>Cerrado</dd></div>
+        </dl>
+        <p class="donde__nota">
+          En la acera de los pares, al lado de la parada de taxis. Entrada sin escalón y
+          local en planta baja. Aparcamiento de rotación a 80 metros.
+        </p>
+        <div class="mapa" data-mapa>
+          <button class="boton boton--linea" type="button" data-mapa-boton>Cargar el mapa de Google</button>
+          <p class="mapa__aviso">El mapa se carga solo si lo pides: hasta entonces esta web no llama a ningún servidor de terceros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie__marca">
+    <svg class="marca__ojo" viewBox="0 0 44 24" aria-hidden="true" focusable="false">
+      <path d="M2 12C8 4 15 0 22 0s14 4 20 12c-6 8-13 12-20 12S8 20 2 12z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="22" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="22" cy="12" r="2" fill="currentColor"/>
+    </svg>
+    <p>Óptica Sextante · Rúa Nova do Faro, 14 · Pontevedra</p>
+  </div>
+  <nav class="pie__nav" aria-label="Enlaces del pie">
+    <ul>
+      <li><a href="#monturas">Monturas</a></li>
+      <li><a href="#lentes">Lentes y precios</a></li>
+      <li><a href="#cita">Pedir revisión</a></li>
+      <li><a href="legal.html">Aviso legal y privacidad</a></li>
+    </ul>
+  </nav>
+  <p class="pie__sello">
+    <strong>Sitio de demostración.</strong> Óptica Sextante es un negocio ficticio; los
+    datos, precios, modelos de montura y personas son de muestra. Ningún dato de esta
+    página corresponde a un negocio real. Esta web no ofrece diagnóstico ni consejo
+    médico: una revisión visual en una óptica no sustituye a una consulta de
+    oftalmología.
+  </p>
+</footer>
+
+<div class="cookie-banner" data-cookies hidden>
+  <p>Esta web usa una única cookie técnica para recordar que has visto este aviso. No hay analítica, ni seguimiento, ni cookies de terceros: el mapa de Google solo se carga si pulsas el botón.</p>
+  <div class="cookie-banner__acciones">
+    <button class="boton boton--azul" type="button" data-cookies-ok>Entendido</button>
+    <a class="boton boton--linea" href="legal.html#cookies">Leer más</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
