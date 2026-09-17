@@ -92,7 +92,14 @@
 
   <!-- ══════════ HERO: la carta de optotipos ══════════ -->
   <section class="hero" id="inicio">
-    <div class="carta" data-carta>
+    <!-- La carta es la versión dibujada del titular: para un lector de pantalla
+         sería una ristra de líneas sueltas, así que el titular va aparte y la
+         carta se oculta a la tecnología de apoyo. -->
+    <h1 class="visualmente-oculta">
+      Óptica Sextante: ver bien no es un lujo, es la primera herramienta que usas cada
+      día sin darte cuenta.
+    </h1>
+    <div class="carta" data-carta aria-hidden="true">
       <ol class="carta__filas">
         <li class="fila fila--1" data-fila><span class="fila__agudeza">0,1</span><p>E</p></li>
         <li class="fila fila--2" data-fila><span class="fila__agudeza">0,2</span><p>VER BIEN</p></li>
