@@ -51,9 +51,21 @@
   "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
 }
 </script>
+<!-- Sin JavaScript no hay quien levante la cortina: mejor no enseñarla. -->
+<noscript><style>.cortina { display: none !important; }</style></noscript>
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- Cortina «optotipo»: la letra se enfoca y la pupila se abre. -->
+<div class="cortina cortina--optica" data-cortina aria-hidden="true">
+  <div class="cortina__iris" data-iris></div>
+  <div class="cortina__centro">
+    <p class="cortina__letra">E</p>
+    <p class="cortina__marca">Óptica Sextante</p>
+    <p class="cortina__pie">enfocando</p>
+  </div>
+</div>
+
 
 <div class="cursor" aria-hidden="true" data-cursor>
   <span class="cursor__lente"></span>

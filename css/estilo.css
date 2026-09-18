@@ -554,3 +554,44 @@ section[id] { scroll-margin-top: clamp(4.5rem, 10vh, 6rem); }
   /* el simulador es una herramienta, no un adorno: sigue funcionando */
   .simulador__texto { transition: none; }
 }
+
+/* ── Cortina de entrada ────────────────────────────────────────────────
+   Obligatoria (§5 del pliego). El `display` va en `:not([hidden])`, nunca
+   en la clase a secas: si no, ganaría al atributo y la página quedaría
+   tapada para siempre —el mismo fallo que el aviso de cookies.
+   ────────────────────────────────────────────────────────────────────── */
+.cortina { position: fixed; inset: 0; z-index: 400; }
+.cortina:not([hidden]) { display: grid; place-items: center; }
+.cortina[hidden] { display: none !important; }
+.cortina__centro {
+  position: relative; z-index: 3;
+  display: grid; justify-items: center; gap: 0.9rem;
+  padding: 0 1.5rem; text-align: center;
+}
+.cortina__marca {
+  margin: 0; font-family: var(--display);
+  font-size: clamp(2.1rem, 8vw, 4.6rem); line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.cortina__pie {
+  margin: 0; font-family: var(--mono);
+  font-size: clamp(0.6rem, 1.8vw, 0.72rem); letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) { .cortina { display: none !important; } }
+
+/* «Optotipo»: la letra entra desenfocada, se enfoca, y la pupila se abre. */
+.cortina--optica { background: transparent; }
+.cortina__iris {
+  position: absolute; left: 50%; top: 50%;
+  width: 0; height: 0; margin: 0; border-radius: 50%;
+  translate: -50% -50%;           /* nunca `transform`: GSAP le escribe el tamaño */
+  box-shadow: 0 0 0 110vmax var(--tinta);
+  z-index: 1;
+}
+.cortina--optica .cortina__marca { color: var(--papel); font-size: clamp(1.5rem, 5vw, 2.6rem); }
+.cortina--optica .cortina__pie { color: var(--ambar); }
+.cortina__letra {
+  margin: 0; font-family: var(--display); font-weight: 700;
+  font-size: clamp(5rem, 22vw, 11rem); line-height: 0.82; color: var(--papel);
+}

@@ -44,6 +44,17 @@ una regleta que señala la línea que toca leer. Aquí es el sistema visual ente
 
 ## Recursos de movimiento
 
+**0. Cortina de entrada.** **«Optotipo»** — la letra «E» entra desenfocada, se enfoca, y entonces se abre la pupila: un círculo que crece desde el centro hasta comerse la pantalla.
+
+Es obligatoria en todas las plantillas (§5 del pliego) y está hecha para no dejar la
+página tapada nunca: se retira al terminar la animación, se retira igual si el CDN de
+GSAP no carga, se retira con `prefers-reduced-motion` y hay además un `setTimeout` de
+5 s de red de seguridad. El `display` va en `.cortina:not([hidden])`, nunca en
+`.cortina` a secas —si fuera a secas ganaría al atributo `hidden` y no se iría jamás.
+El hero no entra hasta que la cortina va por la mitad (la constante `ESPERA` de
+`main.js`), para que el relevo se vea como una sola cosa y no como dos animaciones
+pegadas.
+
 1. **Lenis** como único motor de scroll.
 2. **La carta de optotipos** que se lee sola con la regleta saltando de fila — el
    recurso protagonista.
@@ -53,6 +64,19 @@ una regleta que señala la línea que toca leer. Aquí es el sistema visual ente
 5. **Simulador de dioptrías** manejado por el visitante.
 6. **Botones magnéticos** y **cursor** en forma de lente que engorda y cambia de texto.
 7. **Contadores** y **horario en vivo** con el día de hoy resaltado.
+
+
+## Rendimiento medido
+
+Medido con `PerformanceObserver` de `longtask` (Chromium, 1440×900, recorrido completo
+de la página con la rueda del ratón):
+
+- **1 tarea larga en total**, de **141 ms**, y ocurre **al arrancar**: es GSAP más la
+  webfont, no el código de la plantilla. La cortina de entrada no añade ninguna,
+  porque su gesto son transformaciones, opacidad y un `width` de un solo círculo.
+- **0 tareas largas mientras se recorre la página**: la carta de optotipos y el
+  desenfoque de los titulares son filtros CSS sobre elementos sueltos, y el deslizador
+  de dioptrías solo escribe una propiedad personalizada.
 
 ## Cómo reskinearlo a una óptica real
 

@@ -27,6 +27,34 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
+  /* ── Cortina de entrada ────────────────────────────────────────────────
+     Obligatoria (§5 del pliego) y con RETIRADA GARANTIZADA: se quita
+     siempre —sin GSAP, con movimiento reducido, o si algo falla a mitad—,
+     porque si se queda tapa la página entera. `ESPERA` es lo que el hero
+     aguanta antes de entrar, para que el relevo sea limpio.
+     ────────────────────────────────────────────────────────────────────── */
+  var ESPERA = 0;
+  (function cortina() {
+    var el = document.querySelector('[data-cortina]');
+    if (!el) return;
+    var fuera = false;
+    function quitar() { if (fuera) return; fuera = true; el.hidden = true; }
+    if (!motion) { quitar(); return; }
+    ESPERA = 1.25;
+
+    var iris = el.querySelector('[data-iris]');
+    var centro = el.querySelector('.cortina__centro');
+    var diagonal = Math.sqrt(window.innerWidth * window.innerWidth + window.innerHeight * window.innerHeight) * 1.1;
+    gsap.set(centro, { opacity: 0, filter: 'blur(18px)' });
+    var tl = gsap.timeline({ onComplete: quitar });
+    tl.to(centro, { opacity: 1, filter: 'blur(0px)', duration: 0.62, ease: 'power2.out' })
+      .to(centro, { opacity: 0, duration: 0.3, ease: 'power1.in' }, '+=0.12')
+      .fromTo(iris, { width: 0, height: 0 },
+        { width: diagonal, height: diagonal, duration: 0.9, ease: 'expo.inOut', immediateRender: false }, '-=0.16');
+    setTimeout(quitar, 5000);   // red de seguridad: pase lo que pase, se va
+  })();
+
+
   /* ── 1. Scroll suave ─────────────────────────────────────────────────── */
   var lenis = null;
   if (motion && typeof window.Lenis !== 'undefined') {
@@ -58,7 +86,7 @@
     if (!filas.length) return;
     if (!motion) { if (marca) marca.style.opacity = '0'; return; }
 
-    var tl = gsap.timeline({ delay: 0.2 });
+    var tl = gsap.timeline({ delay: ESPERA + 0.2 });
     filas.forEach(function (fila, i) {
       tl.fromTo(fila,
         { opacity: 0, filter: 'blur(14px)', y: 12 },
@@ -95,7 +123,7 @@
         gsap.to(el, {
           opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
           startAt: { y: par[1] },
-          delay: par[2] ? 1.4 + i * 0.1 : (i % 4) * 0.06,
+          delay: par[2] ? ESPERA + 1.4 + i * 0.1 : (i % 4) * 0.06,
           scrollTrigger: par[2] ? null : { trigger: el, start: 'top 92%', once: true }
         });
       });
